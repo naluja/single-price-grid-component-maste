@@ -1,0 +1,101 @@
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+}
+*{
+    font-family: 'Karla', sans-serif;
+    font-size:16px;
+}
+body{
+    background-color: var(--lightGray);
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:220px 280px;
+    background:var(--cyan);
+    width:650px;
+    height:500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px 2px lightgray;
+}
+.grid-1{
+    background-color: white;
+    grid-column-start:1;
+    grid-column-end:3;
+    padding:1rem 3rem;
+
+
+}
+.grid-1 h1{
+    color:var(--cyan);
+    font-size:1.5rem;
+}
+.grid-1 h2{
+    color:var(--yellow);
+    font-size:1.3rem;
+}
+.grid-1 p{
+    color:var(--grayishBlue);
+    line-height: 1.5rem;
+}
+.grid-2{
+    background-color: var(--cyan);
+    color:white;
+    padding:1rem 2rem 1rem 3rem;
+}
+.grid-2 h2{
+    font-size:1.3rem;
+}
+.grid-2 .dollar{
+    font-size: 2.5rem;
+}
+.grid-2 .text{
+    color:var(--lightGray)
+}
+.grid-2 button{
+    width:260px;
+    padding:0.9rem;
+    border-radius: 0.5rem;
+    background-color: var(--yellow);
+    color:white;
+    border:none;
+    margin-top:1rem;
+    box-shadow: 0px 1px 5px gray;
+}
+.grid-3{
+    background-color: hsl(179, 45%, 52%);
+    padding:1rem 3.2rem 1rem 3rem;
+}
+.grid-3 h2{
+    color:white;
+    font-size: 1.3rem;
+}
+.grid-3 p{
+    color:var(--lightGray);
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 375px){
+    .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width:330px;
+    height:800px;
+    margin:0px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+    .grid-1{
+        background-color: white;
+        grid-column-start:1;
+        grid-column-end:1;
+
+}
